@@ -53,7 +53,7 @@ class Project(db.Model):
    
 
 @app.route('/department')
-def index():
+def department():
    try:
      dept_all = Department.query.all()
      return render_template('department.html',dept_all=dept_all)
