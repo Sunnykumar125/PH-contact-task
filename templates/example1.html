@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="title">{% block title %} Statical Information {% endblock %}</h1>
+<table class = "content"> 
+   
+    <tr> 
+        <th>No Of Employees</th> 
+        <th>Department Name</th> 
+    </tr> 
+    
+    
+        {% for row in value %}  
+            <tr> 
+                <td>{{row[0]}}</td> 
+                <td>{{row[1]}}</td> 
+            </tr> 
+        {% endfor %} 
+    
+</table> 
+
+{% endblock %}

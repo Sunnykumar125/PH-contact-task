@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head link rel="icon" href="data:,">
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.title {
+            margin: 5px;
+        }
+
+.content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+.comment {
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+        }
+
+.post {
+            flex: 20%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3;
+            inline-size: 100%;
+        }
+
+.title a {
+            color: #00a36f;
+            text-decoration: none;
+        }
+
+nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('department') }}">Departments</a>
+        <a href="{{ url_for('employees') }}">Employees</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('example') }}">Query1</a>
+        <a href="{{ url_for('example1') }}">Query2</a>
+        <a href="{{ url_for('example2') }}">Query3</a>
+        
+        
+       
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %}
+         {% endblock %}
+    </div>
+</body>
+</html>

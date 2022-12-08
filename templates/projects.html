@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Projects {% endblock %}</h1>
+    <table class = "content">
+        <tr>
+        <th>Project ID</th>
+        <th>Project Name</th>
+        <th>Project Client</th>
+    </tr>
+        {% for pro in pro_all %}
+        
+            
+            <tr>
+                <td><b>{{ pro.id }}</b></td>
+                <td><b>{{ pro.name }}</b></td>
+                <td><b>{{ pro.client }}</b></td>
+            
+            </tr>
+            {% endfor %}
+        </table>
+                
+    
+        
+    
+{% endblock %}

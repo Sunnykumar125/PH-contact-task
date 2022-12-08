@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Departments {% endblock %}</h1>
+    <table class = "content">
+        <tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+    </tr>
+        {% for dept in dept_all %}
+        
+            
+            <tr>
+                <td><b>{{ dept.id }}</b></td>
+            
+                <td><b>{{ dept.name }}</b></td>
+            
+            </tr>
+            {% endfor %}
+        </table>
+                
+    
+        
+    
+{% endblock %}
